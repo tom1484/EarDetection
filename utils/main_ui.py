@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'assets/window_ui.ui'
+# Form implementation generated from reading ui file 'assets/main_ui.ui'
 #
 # Created by: PyQt5 UI code generator 5.9.2
 #
@@ -11,7 +11,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(3300, 1900)
+        Form.resize(3275, 1895)
         self.identity_frame = QtWidgets.QFrame(Form)
         self.identity_frame.setGeometry(QtCore.QRect(2480, 520, 800, 330))
         self.identity_frame.setStyleSheet("#identity_frame {\n"
@@ -54,19 +54,19 @@ class Ui_Form(object):
         self.name_title.setFont(font)
         self.name_title.setAlignment(QtCore.Qt.AlignCenter)
         self.name_title.setObjectName("name_title")
-        self.name = QtWidgets.QLineEdit(self.name_frame)
-        self.name.setGeometry(QtCore.QRect(150, 8, 630, 60))
+        self.name_holder = QtWidgets.QLineEdit(self.name_frame)
+        self.name_holder.setGeometry(QtCore.QRect(150, 8, 630, 60))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         font.setPointSize(13)
-        self.name.setFont(font)
-        self.name.setAutoFillBackground(False)
-        self.name.setStyleSheet("background-color: white;\n"
+        self.name_holder.setFont(font)
+        self.name_holder.setAutoFillBackground(False)
+        self.name_holder.setStyleSheet("background-color: white;\n"
 "border: 2px solid gray;\n"
 "border-radius: 15px;")
-        self.name.setAlignment(QtCore.Qt.AlignCenter)
-        self.name.setReadOnly(True)
-        self.name.setObjectName("name")
+        self.name_holder.setAlignment(QtCore.Qt.AlignCenter)
+        self.name_holder.setReadOnly(True)
+        self.name_holder.setObjectName("name_holder")
         self.time_frame = QtWidgets.QFrame(self.identity_frame)
         self.time_frame.setGeometry(QtCore.QRect(0, 160, 800, 80))
         self.time_frame.setStyleSheet("")
@@ -83,18 +83,18 @@ class Ui_Form(object):
         self.time_title.setFont(font)
         self.time_title.setAlignment(QtCore.Qt.AlignCenter)
         self.time_title.setObjectName("time_title")
-        self.time = QtWidgets.QLineEdit(self.time_frame)
-        self.time.setGeometry(QtCore.QRect(150, 10, 630, 60))
+        self.time_holder = QtWidgets.QLineEdit(self.time_frame)
+        self.time_holder.setGeometry(QtCore.QRect(150, 10, 630, 60))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         font.setPointSize(13)
-        self.time.setFont(font)
-        self.time.setStyleSheet("background-color: white;\n"
+        self.time_holder.setFont(font)
+        self.time_holder.setStyleSheet("background-color: white;\n"
 "border: 2px solid gray;\n"
 "border-radius: 15px;")
-        self.time.setAlignment(QtCore.Qt.AlignCenter)
-        self.time.setReadOnly(True)
-        self.time.setObjectName("time")
+        self.time_holder.setAlignment(QtCore.Qt.AlignCenter)
+        self.time_holder.setReadOnly(True)
+        self.time_holder.setObjectName("time_holder")
         self.location_frame = QtWidgets.QFrame(self.identity_frame)
         self.location_frame.setGeometry(QtCore.QRect(0, 240, 800, 80))
         self.location_frame.setStyleSheet("")
@@ -111,18 +111,18 @@ class Ui_Form(object):
         self.location_title.setFont(font)
         self.location_title.setAlignment(QtCore.Qt.AlignCenter)
         self.location_title.setObjectName("location_title")
-        self.location = QtWidgets.QLineEdit(self.location_frame)
-        self.location.setGeometry(QtCore.QRect(150, 10, 630, 60))
+        self.location_holder = QtWidgets.QLineEdit(self.location_frame)
+        self.location_holder.setGeometry(QtCore.QRect(150, 10, 630, 60))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         font.setPointSize(13)
-        self.location.setFont(font)
-        self.location.setStyleSheet("background-color: white;\n"
+        self.location_holder.setFont(font)
+        self.location_holder.setStyleSheet("background-color: white;\n"
 "border: 2px solid gray;\n"
 "border-radius: 15px;")
-        self.location.setAlignment(QtCore.Qt.AlignCenter)
-        self.location.setReadOnly(True)
-        self.location.setObjectName("location")
+        self.location_holder.setAlignment(QtCore.Qt.AlignCenter)
+        self.location_holder.setReadOnly(True)
+        self.location_holder.setObjectName("location_holder")
         self.records_frame = QtWidgets.QFrame(Form)
         self.records_frame.setGeometry(QtCore.QRect(2480, 870, 800, 1010))
         self.records_frame.setStyleSheet("#records_frame {\n"
@@ -158,30 +158,30 @@ class Ui_Form(object):
         self.records_style_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.records_style_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.records_style_frame.setObjectName("records_style_frame")
-        self.records = QtWidgets.QListView(self.records_style_frame)
-        self.records.setEnabled(True)
-        self.records.setGeometry(QtCore.QRect(20, 20, 720, 860))
+        self.records_holder = QtWidgets.QListView(self.records_style_frame)
+        self.records_holder.setEnabled(True)
+        self.records_holder.setGeometry(QtCore.QRect(20, 20, 720, 860))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         font.setPointSize(13)
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
-        self.records.setFont(font)
-        self.records.setAutoFillBackground(False)
-        self.records.setStyleSheet("background-color: white;\n"
+        self.records_holder.setFont(font)
+        self.records_holder.setAutoFillBackground(False)
+        self.records_holder.setStyleSheet("background-color: white;\n"
 "border: 0px;")
-        self.records.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustIgnored)
-        self.records.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
-        self.records.setTextElideMode(QtCore.Qt.ElideMiddle)
-        self.records.setMovement(QtWidgets.QListView.Static)
-        self.records.setFlow(QtWidgets.QListView.TopToBottom)
-        self.records.setProperty("isWrapping", False)
-        self.records.setResizeMode(QtWidgets.QListView.Fixed)
-        self.records.setViewMode(QtWidgets.QListView.ListMode)
-        self.records.setUniformItemSizes(False)
-        self.records.setWordWrap(True)
-        self.records.setObjectName("records")
+        self.records_holder.setSizeAdjustPolicy(QtWidgets.QAbstractScrollArea.AdjustIgnored)
+        self.records_holder.setEditTriggers(QtWidgets.QAbstractItemView.NoEditTriggers)
+        self.records_holder.setTextElideMode(QtCore.Qt.ElideMiddle)
+        self.records_holder.setMovement(QtWidgets.QListView.Static)
+        self.records_holder.setFlow(QtWidgets.QListView.TopToBottom)
+        self.records_holder.setProperty("isWrapping", False)
+        self.records_holder.setResizeMode(QtWidgets.QListView.Fixed)
+        self.records_holder.setViewMode(QtWidgets.QListView.ListMode)
+        self.records_holder.setUniformItemSizes(False)
+        self.records_holder.setWordWrap(True)
+        self.records_holder.setObjectName("records_holder")
         self.picture_frame = QtWidgets.QFrame(Form)
         self.picture_frame.setGeometry(QtCore.QRect(2640, 20, 480, 480))
         self.picture_frame.setStyleSheet("#picture_frame {\n"
@@ -192,14 +192,14 @@ class Ui_Form(object):
         self.picture_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.picture_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.picture_frame.setObjectName("picture_frame")
-        self.picture = QtWidgets.QLabel(self.picture_frame)
-        self.picture.setGeometry(QtCore.QRect(20, 20, 440, 440))
-        self.picture.setStyleSheet("background-color: white;\n"
+        self.picture_holder = QtWidgets.QLabel(self.picture_frame)
+        self.picture_holder.setGeometry(QtCore.QRect(20, 20, 440, 440))
+        self.picture_holder.setStyleSheet("background-color: white;\n"
 "border: 2px solid gray;")
-        self.picture.setText("")
-        self.picture.setScaledContents(True)
-        self.picture.setWordWrap(True)
-        self.picture.setObjectName("picture")
+        self.picture_holder.setText("")
+        self.picture_holder.setScaledContents(True)
+        self.picture_holder.setWordWrap(True)
+        self.picture_holder.setObjectName("picture_holder")
         self.camera_style_frame = QtWidgets.QFrame(Form)
         self.camera_style_frame.setGeometry(QtCore.QRect(20, 20, 2440, 1860))
         self.camera_style_frame.setStyleSheet("#camera_style_frame {\n"
@@ -210,13 +210,13 @@ class Ui_Form(object):
         self.camera_style_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.camera_style_frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.camera_style_frame.setObjectName("camera_style_frame")
-        self.camera = QtWidgets.QLabel(self.camera_style_frame)
-        self.camera.setGeometry(QtCore.QRect(20, 20, 2400, 1820))
-        self.camera.setStyleSheet("background-color: white;\n"
+        self.camera_holder = QtWidgets.QLabel(self.camera_style_frame)
+        self.camera_holder.setGeometry(QtCore.QRect(20, 20, 2400, 1820))
+        self.camera_holder.setStyleSheet("background-color: white;\n"
 "border: 2px solid gray;")
-        self.camera.setText("")
-        self.camera.setScaledContents(True)
-        self.camera.setObjectName("camera")
+        self.camera_holder.setText("")
+        self.camera_holder.setScaledContents(True)
+        self.camera_holder.setObjectName("camera_holder")
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)

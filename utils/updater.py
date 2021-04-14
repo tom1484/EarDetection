@@ -8,62 +8,62 @@ from PyQt5.QtGui import QImage, QPixmap
 
 
 class Updater:
-    def __init__(self, ui, db, slm):
+    def __init__(self, ui, database, sl_model):
         self.ui = ui
-        self.db = db
-        self.slm = slm
+        self.database = database
+        self.sl_model = sl_model
 
         self.time = -10
 
     def update(self, name, frame):
         if time.time() - self.time > 3:
-            self.updateFrame(frame)
-            self.clearIdentity()
+            self.update_frame(frame)
+            self.clear_identity()
+
             if name is not None:
-                self.updateIdentity(name)
+                self.update_identity(name)
                 self.time = time.time()
 
-    def clearIdentity(self):
+    def clear_identity(self):
         # clear information
-        self.ui.name.setText('')
-        self.ui.time.setText('')
-        self.ui.location.setText('')
+        self.ui.name_holder.setText('')
+        self.ui.time_holder.setText('')
+        self.ui.location_holder.setText('')
 
-        self.slm.setStringList([])
+        self.sl_model.setStringList([])
 
         # clear image
-        self.ui.picture.setPixmap(QPixmap())
+        self.ui.picture_holder.setPixmap(QPixmap())
 
-    def updateIdentity(self, name):
-        # update information
+    def update_identity(self, name):
+        # update database
         now = datetime.now().strftime("%Y/%m/%d, %H:%M:%S")
-        self.db.add_record(name, now)
+        self.database.add_record(name, now)
 
-        self.ui.name.setText(name)
-        self.ui.time.setText(now)
-        self.ui.location.setText("NTNU")
+        # update information
+        self.ui.name_holder.setText(name)
+        self.ui.time_holder.setText(now)
+        self.ui.location_holder.setText("NTNU")
 
-        records = self.db.select_records(name)
-        print(records)
-        self.slm.setStringList(records)
+        # update records
+        records = self.database.select_records(name)
+        self.sl_model.setStringList(records)
 
         # update image
-        raw = self.db.select_image(name)
+        raw = self.database.select_image(name)
         img = imread(io.BytesIO(base64.b64decode(raw)))
-        print(img.shape)
-
         img = QImage(img, img.shape[1], img.shape[0],
                      img.shape[1] * 3, QImage.Format_RGB888)
         img = QPixmap.fromImage(img)
 
-        self.ui.picture.setPixmap(img)
+        self.ui.picture_holder.setPixmap(img)
 
-    def updateFrame(self, frame):
+    def update_frame(self, frame):
         # convert image to QPixmap
         img = QImage(frame, frame.shape[1], frame.shape[0],
                      frame.shape[1] * 3, QImage.Format_RGB888)
         img = QPixmap.fromImage(img)
 
         # display image
-        self.ui.camera.setPixmap(img)
-        self.ui.camera.setScaledContents(True)
+        self.ui.camera_holder.setPixmap(img)
+        self.ui.camera_holder.setScaledContents(True)

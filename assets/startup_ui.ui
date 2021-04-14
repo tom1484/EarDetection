@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1650</width>
-    <height>950</height>
+    <width>3300</width>
+    <height>1900</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,10 +19,10 @@
   <widget class="QFrame" name="login_frame">
    <property name="geometry">
     <rect>
-     <x>500</x>
-     <y>500</y>
-     <width>660</width>
-     <height>341</height>
+     <x>1000</x>
+     <y>1000</y>
+     <width>1320</width>
+     <height>680</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -41,11 +41,16 @@
    <widget class="QFrame" name="account_frame">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>105</y>
-      <width>400</width>
-      <height>40</height>
+      <x>160</x>
+      <y>210</y>
+      <width>800</width>
+      <height>80</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#account_frame {
+	border: 0px;
+}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -58,16 +63,16 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>100</width>
-       <height>40</height>
+       <width>200</width>
+       <height>80</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>微軟正黑體</family>
-       <pointsize>20</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
+       <family>Sans Serif</family>
+       <pointsize>16</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
       </font>
      </property>
      <property name="text">
@@ -80,27 +85,47 @@
     <widget class="QLineEdit" name="account">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>200</x>
        <y>0</y>
-       <width>300</width>
-       <height>40</height>
+       <width>600</width>
+       <height>80</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Noto Mono</family>
+       <pointsize>14</pointsize>
+      </font>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: white;
 border: 2px solid gray;
 border-radius: 20px;</string>
      </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="cursorPosition">
+      <number>0</number>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
    </widget>
    <widget class="QFrame" name="key_frame">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>175</y>
-      <width>400</width>
-      <height>40</height>
+      <x>160</x>
+      <y>350</y>
+      <width>800</width>
+      <height>80</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#key_frame {
+	border: 0px;
+}</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -113,16 +138,16 @@ border-radius: 20px;</string>
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>100</width>
-       <height>40</height>
+       <width>200</width>
+       <height>80</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>微軟正黑體</family>
-       <pointsize>20</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
+       <family>Sans Serif</family>
+       <pointsize>16</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
       </font>
      </property>
      <property name="text">
@@ -135,16 +160,31 @@ border-radius: 20px;</string>
     <widget class="QLineEdit" name="key">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>200</x>
        <y>0</y>
-       <width>300</width>
-       <height>40</height>
+       <width>600</width>
+       <height>80</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Noto Mono</family>
+       <pointsize>14</pointsize>
+      </font>
      </property>
      <property name="styleSheet">
       <string notr="true">background-color: white;
 border: 2px solid gray;
 border-radius: 20px;</string>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+     <property name="cursorPosition">
+      <number>0</number>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </widget>
@@ -153,8 +193,8 @@ border-radius: 20px;</string>
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>660</width>
-      <height>70</height>
+      <width>1320</width>
+      <height>140</height>
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -177,19 +217,19 @@ border-radius: 20px;</string>
     <widget class="QLabel" name="login_title">
      <property name="geometry">
       <rect>
-       <x>245</x>
+       <x>490</x>
        <y>0</y>
-       <width>170</width>
-       <height>70</height>
+       <width>340</width>
+       <height>140</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>微軟正黑體</family>
-       <pointsize>25</pointsize>
-       <weight>75</weight>
+       <family>Noto Sans CJK HK</family>
+       <pointsize>22</pointsize>
+       <weight>50</weight>
        <italic>false</italic>
-       <bold>true</bold>
+       <bold>false</bold>
        <underline>false</underline>
        <strikeout>false</strikeout>
        <kerning>true</kerning>
@@ -206,18 +246,18 @@ border-radius: 20px;</string>
    <widget class="QPushButton" name="login_button">
     <property name="geometry">
      <rect>
-      <x>245</x>
-      <y>250</y>
-      <width>170</width>
-      <height>51</height>
+      <x>490</x>
+      <y>500</y>
+      <width>340</width>
+      <height>100</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>微軟正黑體</family>
-      <pointsize>20</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>Sans Serif</family>
+      <pointsize>16</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -236,10 +276,10 @@ border-radius: 20px;</string>
   <widget class="QLabel" name="logo">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>90</y>
-     <width>790</width>
-     <height>360</height>
+     <x>860</x>
+     <y>180</y>
+     <width>1580</width>
+     <height>720</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -251,14 +291,20 @@ border-radius: 20px;</string>
    <property name="pixmap">
     <pixmap>logo.png</pixmap>
    </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLabel" name="background">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1651</width>
-     <height>951</height>
+     <width>3300</width>
+     <height>1900</height>
     </rect>
    </property>
    <property name="text">
@@ -266,6 +312,12 @@ border-radius: 20px;</string>
    </property>
    <property name="pixmap">
     <pixmap>background.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
    </property>
   </widget>
   <zorder>background</zorder>

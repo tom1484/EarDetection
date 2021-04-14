@@ -111,7 +111,7 @@ border-top-right-radius: 15px;
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLineEdit" name="name">
+    <widget class="QLineEdit" name="name_holder">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -184,7 +184,7 @@ border-radius: 15px;</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLineEdit" name="time">
+    <widget class="QLineEdit" name="time_holder">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -254,7 +254,7 @@ border-radius: 15px;</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
-    <widget class="QLineEdit" name="location">
+    <widget class="QLineEdit" name="location_holder">
      <property name="geometry">
       <rect>
        <x>150</x>
@@ -358,7 +358,7 @@ border-top-right-radius: 15px;
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QListView" name="records">
+    <widget class="QListView" name="records_holder">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -441,7 +441,7 @@ border: 0px;</string>
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QLabel" name="picture">
+   <widget class="QLabel" name="picture_holder">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -487,7 +487,7 @@ border: 2px solid gray;</string>
    <property name="frameShadow">
     <enum>QFrame::Raised</enum>
    </property>
-   <widget class="QLabel" name="camera">
+   <widget class="QLabel" name="camera_holder">
     <property name="geometry">
      <rect>
       <x>20</x>
