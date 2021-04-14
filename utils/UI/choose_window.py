@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QDialog
 
-from utils.choose_ui import Ui_Form
+from utils.UI.choose_ui import Ui_Form
 
 
 class chooseWindow(QDialog):

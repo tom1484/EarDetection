@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QDialog
 
-from utils.startup_ui import Ui_Form
+from utils.UI.startup_ui import Ui_Form
 
 
 class startupWindow(QDialog):

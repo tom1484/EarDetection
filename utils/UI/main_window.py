@@ -1,12 +1,12 @@
 from PyQt5.QtWidgets import QDialog
 from PyQt5.QtCore import QTimer, QStringListModel
 
-from utils.main_ui import Ui_Form
+from utils.UI.main_ui import Ui_Form
 
-from utils.recognizer import Recognizer
-from utils.camera import Camera
-from utils.database import Database
-from utils.updater import Updater
+from utils.Detector import Recognizer
+from utils.Camera import Camera
+from utils.Database import Database
+from utils.InfoUpdater import Updater
 
 
 class mainWindow(QDialog):

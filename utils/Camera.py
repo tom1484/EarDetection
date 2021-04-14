@@ -2,8 +2,8 @@ import cv2
 
 
 class Camera:
-    def __init__(self, camIdx, width, height):
-        self.camera = cv2.VideoCapture(camIdx)
+    def __init__(self, cam_idx, width, height):
+        self.camera = cv2.VideoCapture(cam_idx)
         self.width = width
         self.height = height
 
