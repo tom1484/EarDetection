@@ -51,7 +51,7 @@ class CNN:
         value = output.data.numpy()[0]
 
         if label == 0:
-            name = "Benson"
+            name = "Smark"
         else:
             name = "Smark"
 

@@ -10,8 +10,7 @@ class YOLO:
 
     def detect(self, frame):
         darknet_image = dn.make_image(self.width, self.height, 3)
-        img_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        img_resized = cv2.resize(img_rgb, (self.width, self.height),
+        img_resized = cv2.resize(frame, (self.width, self.height),
                                  interpolation=cv2.INTER_LINEAR)
 
         # get image ratios to convert bounding boxes to proper size
@@ -26,13 +25,16 @@ class YOLO:
 
         results = []
         for label, confidence, bbox in detections:
-            if float(confidence) <= 90.0:
+            if float(confidence) <= 98.0:
                 continue
 
             left, top, right, bottom = dn.bbox2points(bbox)
-            left, top, right, bottom = int(left * width_ratio), int(top * height_ratio), int(
-                right * width_ratio), int(bottom * height_ratio)
+            left, top, right, bottom = int(left * width_ratio), int(top * height_ratio), \
+                                       int(right * width_ratio), int(bottom * height_ratio)
 
-            results.append((left, top, right, bottom))
+            results.append((confidence, (left, top, right, bottom)))
 
-        return results
+        if len(results) > 0:
+            return max(results)[1]
+        else:
+            return None
